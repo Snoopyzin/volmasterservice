@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Volmaster Service | Reprogramação eletrônica e performance</title>
+  <meta name="description" content="Reprogramação de carros, caminhonetes e caminhões, Stage 1, 2 e 3, soluções eletrônicas, escapamentos, equipamentos originais e rede de parceiros Slave.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,500..900;1,62..125,800..900&family=JetBrains+Mono:wght@400;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ========== CABEÇALHO ========== -->
+  <header class="topo" id="topo">
+    <div class="topo__inner">
+      <a class="marca" href="#topo">
+        <img src="images/logo-volmaster-tech.png" width="1200" height="502" alt="Volmaster Tech — ECU Remap &amp; Performance">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#stages">Stages</a></li>
+          <li><a href="#escapamentos">Escapamentos</a></li>
+          <li><a href="#equipamentos">Equipamentos</a></li>
+          <li><a href="#slave">Parceiros Slave</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--whats topo__zap" href="#" data-whatsapp>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8.5 8.5 0 1 1 8.6 19z"/><path d="M9 9.3c.3 2.8 2.9 5.4 5.7 5.7l1-1.6-2.1-1-1 1c-1-.4-1.7-1.1-2.1-2.1l1-1-1-2.1z"/></svg>
+        <span>Orçamento</span>
+      </a>
+
+      <button class="icone-btn topo__menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h18M3 12h18M3 17.5h12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ========== HERO: leitura da ECU ========== -->
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="hero__grade" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__texto">
+          <p class="terminal"><span class="terminal__ok">●</span> ECU conectada · leitura concluída</p>
+          <h1 class="hero__titulo" id="hero-titulo">Reprogramação eletrônica <em>que entrega.</em></h1>
+          <p class="hero__desc">Carros, caminhonetes e caminhões. Mapas Stage 1, 2 e 3, soluções eletrônicas, escapamentos e equipamentos originais — com suporte técnico de verdade, presencial ou remoto.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primario" href="#" data-whatsapp="Olá! Vim pelo site da Volmaster Service. Quero um orçamento de reprogramação.">Pedir orçamento</a>
+            <a class="btn btn--claro" href="#servicos">Ver serviços</a>
+          </div>
+          <ul class="hero__tags">
+            <li>Leves</li><li>Diesel</li><li>Caminhões</li><li>Euro 6</li>
+          </ul>
+        </div>
+
+        <!-- Painel dinamômetro: alterna os stages -->
+        <figure class="dino" aria-labelledby="dino-legenda">
+          <div class="dino__topo">
+            <span class="dino__titulo">Potência × RPM</span>
+            <div class="dino__stages" role="group" aria-label="Escolher mapa">
+              <button type="button" data-stage="0" aria-pressed="false">Original</button>
+              <button type="button" data-stage="1" aria-pressed="true">Stage 1</button>
+              <button type="button" data-stage="2" aria-pressed="false">Stage 2</button>
+              <button type="button" data-stage="3" aria-pressed="false">Stage 3</button>
+            </div>
+          </div>
+          <svg class="dino__grafico" viewBox="0 0 400 220" role="img" aria-label="Curva ilustrativa de potência: o mapa escolhido fica acima da curva original">
+            <g class="dino__eixos">
+              <path d="M30 190H390M30 190V15"/>
+              <path class="dino__linha-guia" d="M30 146H390M30 102H390M30 58H390"/>
+            </g>
+            <path class="dino__original" d="M30 182 C 90 160, 150 110, 220 96 S 330 92, 390 110"/>
+            <path class="dino__mapa" id="dino-mapa" d="M30 180 C 90 150, 150 90, 220 72 S 330 66, 390 86"/>
+            <text x="30" y="210">1000</text><text x="200" y="210">3000</text><text x="360" y="210">RPM</text>
+          </svg>
+          <figcaption class="dino__rodape" id="dino-legenda">
+            <span class="dino__chave"><i class="dino__cor dino__cor--orig"></i>Original</span>
+            <span class="dino__chave"><i class="dino__cor dino__cor--mapa"></i><span id="dino-nome">Stage 1</span></span>
+            <p class="dino__desc" id="dino-desc">Só software. Mais potência e torque com o hardware original.</p>
+            <small>Curva ilustrativa — o ganho real depende de cada veículo.</small>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== FAIXA ========== -->
+    <div class="fita" aria-label="Resumo">
+      <ul>
+        <li>Reprogramação</li><li>Performance</li><li>Escapamentos</li><li>Equipamentos</li><li>Soluções eletrônicas</li>
+      </ul>
+    </div>
+
+    <!-- ========== SERVIÇOS ========== -->
+    <section class="secao" id="servicos" aria-labelledby="servicos-titulo">
+      <div class="secao__topo">
+        <p class="rotulo">// o que a gente faz</p>
+        <h2 class="secao__titulo" id="servicos-titulo">Serviços</h2>
+      </div>
+
+      <div class="modulos">
+        <article class="modulo modulo--grande">
+          <div class="foto" data-foto="reprogramacao"><span>foto em breve</span></div>
+          <div class="modulo__corpo">
+            <p class="modulo__cod">0x01</p>
+            <h3>Reprogramação eletrônica</h3>
+            <p>Carros, caminhonetes e caminhões. Programação de módulos, ECU/ECM e veículos Euro 6 — na bancada ou de forma remota.</p>
+            <ul class="lista-chips">
+              <li>Programação remota</li><li>Arquivos personalizados</li><li>ECU / ECM</li><li>Euro 6</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="modulo">
+          <p class="modulo__cod">0x02</p>
+          <h3>Soluções eletrônicas</h3>
+          <p>Gerenciamento eletrônico, limitadores de velocidade quando aplicável e soluções específicas para caminhões.</p>
+          <ul class="lista-chips">
+            <li>EGR</li><li>DPF</li><li>DTC</li><li>SCR</li>
+          </ul>
+        </article>
+
+        <article class="modulo">
+          <p class="modulo__cod">0x03</p>
+          <h3>Pedal e acelerador</h3>
+          <p>Instalação de <strong>Shift Power</strong>: acelerador com resposta mais rápida e menos atraso no pedal.</p>
+          <ul class="lista-chips">
+            <li>Shift Power</li><li>Resposta imediata</li>
+          </ul>
+        </article>
+
+        <article class="modulo">
+          <p class="modulo__cod">0x04</p>
+          <h3>Mapas sob medida</h3>
+          <p>Mapas de economia, de performance ou personalizados para o seu uso — do carro de passeio ao caminhão de frota.</p>
+          <ul class="lista-chips">
+            <li>Economia</li><li>Performance</li><li>Personalizado</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== STAGES ========== -->
+    <section class="faixa-escura" id="stages" aria-labelledby="stages-titulo">
+      <div class="secao">
+        <div class="secao__topo">
+          <p class="rotulo">// performance</p>
+          <h2 class="secao__titulo" id="stages-titulo">Stage 1, 2 e 3</h2>
+          <p class="secao__desc">Aumento de potência e torque, otimização de desempenho e acelerador mais esperto. Para leves, diesel e caminhões.</p>
+        </div>
+        <ol class="stages">
+          <li class="stage">
+            <span class="stage__num">1</span>
+            <h3>Stage 1</h3>
+            <p>Reprogramação só no software, mantendo as peças originais. O ponto de partida para ganhar força e resposta.</p>
+            <div class="stage__barra" aria-hidden="true"><span style="--n:.4"></span></div>
+          </li>
+          <li class="stage">
+            <span class="stage__num">2</span>
+            <h3>Stage 2</h3>
+            <p>Mapa acompanhado de upgrades como downpipe e escapamento. Mais fluxo, mais ganho.</p>
+            <div class="stage__barra" aria-hidden="true"><span style="--n:.7"></span></div>
+          </li>
+          <li class="stage">
+            <span class="stage__num">3</span>
+            <h3>Stage 3</h3>
+            <p>Projeto completo de performance, com arquivo desenvolvido para o conjunto de peças do veículo.</p>
+            <div class="stage__barra" aria-hidden="true"><span style="--n:1"></span></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== ESCAPAMENTOS ========== -->
+    <section class="secao dividida" id="escapamentos" aria-labelledby="escap-titulo">
+      <div class="foto foto--alta" data-foto="escapamentos"><span>foto em breve</span></div>
+      <div>
+        <p class="rotulo">// escapamentos</p>
+        <h2 class="secao__titulo" id="escap-titulo">Som, fluxo e acabamento.</h2>
+        <p class="secao__desc">Sistemas de escapamento para carros, caminhonetes e caminhões.</p>
+        <ul class="lista-check">
+          <li>Escapamentos esportivos</li>
+          <li>Downpipe</li>
+          <li>Full Inox</li>
+          <li>Escapamento direto</li>
+          <li>Difusores</li>
+        </ul>
+        <a class="btn btn--secundario" href="#" data-whatsapp="Olá! Quero um orçamento de escapamento.">Orçar escapamento</a>
+      </div>
+    </section>
+
+    <!-- ========== EQUIPAMENTOS ========== -->
+    <section class="secao" id="equipamentos" aria-labelledby="equip-titulo">
+      <div class="secao__topo">
+        <p class="rotulo">// equipamentos</p>
+        <h2 class="secao__titulo" id="equip-titulo">Equipamentos originais, com suporte.</h2>
+        <p class="secao__desc">Linha profissional para leitura e gravação de módulos, programação em bancada/Boot, interfaces e acessórios.</p>
+      </div>
+      <ul class="equipamentos">
+        <li class="equip"><div class="foto foto--quadrada" data-foto="the-genius"><span>foto em breve</span></div><h3>The Genius</h3></li>
+        <li class="equip"><div class="foto foto--quadrada" data-foto="new-genius"><span>foto em breve</span></div><h3>New Genius</h3></li>
+        <li class="equip"><div class="foto foto--quadrada" data-foto="new-trasdata"><span>foto em breve</span></div><h3>New Trasdata</h3></li>
+        <li class="equip"><div class="foto foto--quadrada" data-foto="dimsport"><span>foto em breve</span></div><h3>Linha DIMSport</h3></li>
+      </ul>
+      <p class="equip__nota">Equipamentos de primeira linha, originais e com suporte técnico. <a href="#" data-whatsapp="Olá! Quero informações sobre equipamentos de reprogramação.">Consultar disponibilidade →</a></p>
+    </section>
+
+    <!-- ========== PARCEIROS SLAVE ========== -->
+    <section class="slave" id="slave" aria-labelledby="slave-titulo">
+      <div class="slave__inner">
+        <div>
+          <p class="rotulo rotulo--claro">// rede de parceiros</p>
+          <h2 class="slave__titulo" id="slave-titulo">Seja um parceiro <em>Slave.</em></h2>
+          <p>Para oficinas e profissionais de reprogramação: você atende o cliente, a gente fornece os arquivos e o suporte técnico.</p>
+          <a class="btn btn--branco" href="#" data-whatsapp="Olá! Tenho interesse em ser parceiro Slave da Volmaster.">Quero ser parceiro</a>
+        </div>
+        <ul class="slave__lista">
+          <li><b>Arquivos</b>Desenvolvimento e fornecimento de arquivos de programação e personalizados.</li>
+          <li><b>Remoto</b>Serviços de programação remota para a sua oficina.</li>
+          <li><b>Presencial</b>Atendimento na bancada quando o serviço pede.</li>
+          <li><b>Suporte</b>Suporte técnico dedicado aos parceiros da rede.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== COMO FUNCIONA ========== -->
+    <section class="secao" id="como-funciona" aria-labelledby="como-titulo">
+      <div class="secao__topo">
+        <p class="rotulo">// passo a passo</p>
+        <h2 class="secao__titulo" id="como-titulo">Como funciona</h2>
+      </div>
+      <ol class="passos">
+        <li class="passo"><span class="passo__num">01</span><h3>Chama no WhatsApp</h3><p>Manda o modelo, ano e motor do veículo e o que você quer melhorar.</p></li>
+        <li class="passo"><span class="passo__num">02</span><h3>Leitura e arquivo</h3><p>Fazemos a leitura da ECU e preparamos o arquivo certo para o seu caso.</p></li>
+        <li class="passo"><span class="passo__num">03</span><h3>Gravação e teste</h3><p>Presencial ou remoto. Gravamos, testamos e acompanhamos depois.</p></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape__inner">
+      <img class="rodape__logo" src="images/logo-volmaster-tech.png" width="1200" height="502" alt="Volmaster Tech — ECU Remap &amp; Performance">
+      <div>
+        <p class="rodape__titulo">Volmaster Service</p>
+        <p class="rodape__texto">Tecnologia, equipamentos originais, suporte técnico e uma rede de parceiros para levar a reprogramação eletrônica até você.</p>
+      </div>
+      <div>
+        <p class="rodape__titulo">Atendimento</p>
+        <ul>
+          <li><a href="#" data-whatsapp>WhatsApp (62) 98493-0079</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#slave">Parceiros Slave</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="rodape__copy">© <span id="ano">2026</span> Volmaster Service · Reprogramação • Performance • Escapamentos • Equipamentos • Soluções Eletrônicas</p>
+  </footer>
+
+  <a class="whats-flutuante" href="#" data-whatsapp aria-label="Chamar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8.5 8.5 0 1 1 8.6 19z"/><path d="M9 9.3c.3 2.8 2.9 5.4 5.7 5.7l1-1.6-2.1-1-1 1c-1-.4-1.7-1.1-2.1-2.1l1-1-1-2.1z"/></svg>
+  </a>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
