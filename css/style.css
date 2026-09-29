@@ -278,6 +278,8 @@ svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; 
 .foto:has(img) { border-style: solid; border-color: var(--borda); }
 .foto--alta { aspect-ratio: 4 / 5; }
 .foto--quadrada { aspect-ratio: 1; }
+.foto--banner { aspect-ratio: 1600 / 666; }
+.modulo--grande:has(.foto--banner) { grid-template-columns: 1fr; gap: 24px; }
 
 /* ---------- Módulos (serviços) ---------- */
 
@@ -338,7 +340,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; 
 .lista-check li::before { content: ">"; font-family: var(--mono); color: var(--destaque); }
 @media (max-width: 799px) {
   .dividida { grid-template-columns: 1fr; }
-  .dividida .foto--alta { aspect-ratio: 16 / 10; }
+  .dividida .foto--alta:not(:has(img)) { aspect-ratio: 16 / 10; }
 }
 @media (max-width: 420px) { .lista-check { grid-template-columns: 1fr; } }
 
