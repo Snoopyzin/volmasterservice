@@ -1,9 +1,9 @@
 /* =========================================================
-   Volmaster Service — interações
+   Volmaster Tech Performance — interações
    ========================================================= */
 (() => {
   const WHATSAPP = '5562984930079';
-  const MENSAGEM_PADRAO = 'Olá! Vim pelo site da Volmaster Service.';
+  const MENSAGEM_PADRAO = 'Olá! Vim pelo site da Volmaster Tech Performance.';
 
   const $ = (seletor, raiz = document) => raiz.querySelector(seletor);
   const $$ = (seletor, raiz = document) => [...raiz.querySelectorAll(seletor)];
@@ -11,7 +11,8 @@
   /* ---------- Links de WhatsApp ---------- */
   $$('[data-whatsapp]').forEach((el) => {
     const texto = el.dataset.whatsapp || MENSAGEM_PADRAO;
-    el.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
+    const numero = el.dataset.whatsappNumero || WHATSAPP;
+    el.href = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
     el.target = '_blank';
     el.rel = 'noopener';
   });
